@@ -2,7 +2,7 @@ resources:
 - name: source-code-from-github
   type: git
   source:
-    uri: https://github.com/eddytnk/deploy-springboot-app-using-concourse-ci
+    uri: https://github.com/sivaramPothur/deploy-springboot-app-using-concourse-ci
     branch: master
 
 - name: s3-stored-jar
