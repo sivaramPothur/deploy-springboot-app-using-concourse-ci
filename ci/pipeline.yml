@@ -8,20 +8,20 @@ resources:
 - name: s3-stored-jar
   type: s3
   source:
-    bucket: eddytnk
-    region_name: us-east-2
-    regexp: jars/springboot-concourse-(.*)-SNAPSHOT.jar
-    access_key_id: ((AWSAccessKeyId))
-    secret_access_key: ((AWSSecretKey))
+    bucket: concourse-ci-test-bucket
+    region_name: us-east-1
+    regexp: jars/springboot-concourse-19(.*)-SNAPSHOT.jar
+    access_key_id: AKIAJNLWP66HRGO5QRXQ
+    secret_access_key: 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
 
 - name: pcf-resource
   type: cf
   source:
     api: https://api.run.pivotal.io
-    username: ((PCF_EMAIL))
-    password: ((PCF_PASSWORD))
-    organization: ((PCF_ORG))
-    space: ((PCF_SPACE))
+    username: pothuru.sivaram@gmail.com
+    password: Test@123
+    organization: hexa-pcfd-psr
+    space: demo
     skip_cert_check: false
 
 jobs:
