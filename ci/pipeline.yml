@@ -30,7 +30,6 @@ jobs:
   plan:
     - get: source-code-from-github
       trigger: true
-    - get: s3-stored-jar
     - task: run-test-and-build-jar-file
       config:
         platform: linux
